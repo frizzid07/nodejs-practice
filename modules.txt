@@ -1,0 +1,3 @@
+Nodemon => npm install nodemon -g
+Lodash => npm install lodash --save
+Yargs => npm install yargs@12.0.2 --save
