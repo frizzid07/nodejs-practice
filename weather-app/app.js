@@ -1,8 +1,37 @@
-const req = require('request');
+const request = require('request');
+const yargs = require('yargs');
 
-req({
-    url: 'https://us1.locationiq.com/v1/search.php?key=c6b10e6f340c9e&q=Ganeshwadi,%20Thane%20West,%20Thane,%20Maharashtra,%20India&format=json#0',
-    json: true
-}, (error, response, body) => {
-    console.log(body);
-})
+const opencage = require('opencage-api-client');
+
+const argv = yargs
+    .options({
+        a: {
+            demand: true,
+            alias: 'address',
+            describe: 'Address to Fetch Weather for',
+            string: true
+        }
+    })
+    .help()
+    .alias('help', 'h')
+    .argv;
+
+var inputAddress = argv.address;
+
+opencage.geocode({q: inputAddress}).then(data => {
+//   console.log(JSON.stringify(data));
+  if (data.status.code == 200) {
+    if (data.results.length > 0) {
+      var place = data.results[0];
+      console.log('Address: ', place.formatted);
+      console.log('Timezone: ', place.annotations.timezone.name);
+      console.log('Latitude: ', place.geometry.lat);
+      console.log('Longitude: ', place.geometry.lng);
+    }
+  }
+  else {
+      console.log('Invalid Address! Please enter a valid address.');
+  }
+}).catch(error => {
+  console.log('error', error.message);
+});

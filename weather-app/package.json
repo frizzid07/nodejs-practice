@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-geocoder": "^3.22.0",
+    "node-geocoder-cli": "0.0.1",
+    "opencage-api-client": "^0.3.0",
     "request": "^2.88.0"
   }
 }
