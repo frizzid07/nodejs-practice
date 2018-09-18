@@ -14,8 +14,9 @@ var geocodeAddress = (address, callback) => {
             });
             }
         }
-    }).catch(error => {
-    callback('Unable to find this location');
+        else if (error || data.status === 'ZERO_RESULTS') {
+            callback('Unable to fetch Geocode details!');
+        }
     });
 }
 
