@@ -2,4 +2,6 @@ Nodemon => npm install nodemon -g
 Lodash => npm install lodash --save
 Yargs => npm install yargs@12.0.2 --save
 Request => npm install request@2.88.0 --save
-Geocoder => npm install node-geocoder --save
+OpenCage API Geocoder => npm install opencage-api-client --save
+Weather API => developer.forecast.io
+Axios => npm install axios@0.18.0 --save 

@@ -20,3 +20,7 @@ var getWeather = (latitude, longitude, callback) => {
 }
 
 module.exports.getWeather = getWeather;
+
+module.exports= {
+    temperature, apparentTemperature
+}
