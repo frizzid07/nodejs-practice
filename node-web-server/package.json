@@ -16,5 +16,13 @@
     "hbs": "^4.0.1"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frizzid07/nodejs-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frizzid07/nodejs-practice/issues"
+  },
+  "homepage": "https://github.com/frizzid07/nodejs-practice#readme",
   "description": ""
 }
