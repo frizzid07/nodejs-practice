@@ -1,4 +1,4 @@
-mongo-data/
-node_modules/
-playground-basic/
+mongo-data/*
+node_modules/*
+playground-basic/*
 *.txt
