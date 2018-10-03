@@ -8,4 +8,5 @@ Axios => npm install axios@0.18.0 --save
 Express => npm install express@4.16.3 --save
 Handlebars => npm install hbs@4.0.1 --save
 Mocha => npm i mocha@5.2.0 --save-dev
-MongoDB => npm i mongodb@2.2.33 --save
+MongoDB => npm i mongodb@2.2.36 --save
+Mongoose => npm i mongoose@5.2.17 --save
